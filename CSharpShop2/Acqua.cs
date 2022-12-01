@@ -88,6 +88,12 @@ namespace CSharpShop2
             return this.litri;
         }
 
+        public double SvuotaBottiglia(double bottigliaVuota)
+        {
+            this.litri = 0;
+            return this.litri;
+        }
+
         // METODI PRIVATI
     }
 }

@@ -94,6 +94,18 @@ namespace CSharpShop2
             return this.litri;
         }
 
+        public override void Stampa()
+        {
+            base.Stampa();
+            Console.WriteLine();
+            Console.WriteLine("Dati acqua:");
+            Console.WriteLine();
+            Console.WriteLine("Litri: " + GetLitri());
+            Console.WriteLine("pH: " + GetPH());
+            Console.WriteLine("Sorgente: " + GetSorgente());
+
+        }
+
         // METODI PRIVATI
     }
 }

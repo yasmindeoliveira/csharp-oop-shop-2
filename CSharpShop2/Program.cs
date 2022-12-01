@@ -19,10 +19,9 @@ Ananas.Stampa();
 Ananas.MangiaFrutta(4);
 Ananas.Stampa();
 
-/*
-Ananas.RiempiSacchetto();
+Ananas.RiempiSacchetto(1);
 Ananas.Stampa();
-*/
+
 
 
 

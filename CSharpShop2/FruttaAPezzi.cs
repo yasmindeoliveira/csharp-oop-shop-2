@@ -10,7 +10,7 @@ namespace CSharpShop2
     {
         // CARATTERISTICHE
         private string tipoFrutto;
-        private int quantita;
+        private uint quantita;
 
         // STATO
         private bool secca;
@@ -29,7 +29,7 @@ namespace CSharpShop2
         {
             return this.tipoFrutto;
         }
-        public int GetQuantita()
+        public uint GetQuantita()
         {
             return this.quantita;
         }
@@ -44,7 +44,7 @@ namespace CSharpShop2
         {
             this.tipoFrutto = tipoFrutto;
         }
-        public void SetQuantita(int quantita)
+        public void SetQuantita(uint quantita)
         {
             this.quantita = quantita;
         }
@@ -55,7 +55,7 @@ namespace CSharpShop2
 
         // METODO
 
-        public int MangiaFrutta(int pezziDaMangiare)
+        public uint MangiaFrutta(uint pezziDaMangiare)
         {
             if (pezziDaMangiare <= this.quantita)
             {
@@ -77,7 +77,12 @@ namespace CSharpShop2
             return this.quantita;
         }
 
-            public override void Stampa()
+        public void RiempiSacchetto(uint fruttaDaInserire)
+        {
+            this.quantita += fruttaDaInserire;
+        }
+
+        public override void Stampa()
         {
             base.Stampa();
             Console.WriteLine();

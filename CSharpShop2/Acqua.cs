@@ -19,7 +19,7 @@ namespace CSharpShop2
         public Acqua(string nome, string descrizione, float prezzo, int iva, double litri, double pH, string sorgente) : base(nome, descrizione, prezzo, iva)
         {
             this.litri = litri;
-            this.pH = pH;
+            this.pH = Math.Round(pH,2);
             this.sorgente = sorgente;
             this.capienza = 1.5;
         }
@@ -76,22 +76,22 @@ namespace CSharpShop2
             return this.litri;
         }
 
-        public double RiempiBottiglia(double litriDaRiempire)
+        public void RiempiBottiglia(float litriDaRiempire)
         {
-            if(this.capienza - this.litri <= litriDaRiempire)
+            if(this.capienza - this.litri >= litriDaRiempire)
             {
-                this.litri = this.litri + litriDaRiempire;
+                this.litri += Math.Round(litriDaRiempire, 2);
             } else
             {
-                Console.WriteLine("Hai la bottiglia piena.");
+                Console.WriteLine("La bottiglia è stata riempita al massimo.");
+                this.litri = this.capienza;
             }
-            return this.litri;
+          
         }
 
-        public double SvuotaBottiglia(double bottigliaVuota)
+        public void SvuotaBottiglia()
         {
             this.litri = 0;
-            return this.litri;
         }
 
         public override void Stampa()
@@ -103,6 +103,7 @@ namespace CSharpShop2
             Console.WriteLine("Litri: " + GetLitri());
             Console.WriteLine("pH: " + GetPH());
             Console.WriteLine("Sorgente: " + GetSorgente());
+            Console.WriteLine();
 
         }
 

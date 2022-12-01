@@ -107,6 +107,6 @@ namespace CSharpShop2
 
         }
 
-        // METODI PRIVATI
+        
     }
 }

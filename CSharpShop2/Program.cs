@@ -13,4 +13,16 @@ Bottiglia1.Stampa();
 Bottiglia1.SvuotaBottiglia();
 Bottiglia1.Stampa();
 
+FruttaAPezzi Ananas = new FruttaAPezzi("Ananas", "Bromeliaceae", "Frutta", 1.5f, 10, true);
+Ananas.Stampa();
+
+Ananas.MangiaFrutta(4);
+Ananas.Stampa();
+
+/*
+Ananas.RiempiSacchetto();
+Ananas.Stampa();
+*/
+
+
 
